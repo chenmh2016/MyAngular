@@ -1,0 +1,8 @@
+ 通过bower install angular-ui-router之后，在bower.json中生成这样一段话，没有在dependies中，我把angular-ui-router手动移动到了那里。。
+ "resolutions": {
+    "angular-ui-router": "~0.2.13"
+  }
+
+
+一开始执行bower所有的命令一直报错//，
+进入bower.json之后才发现这里面有我原来注释的ng-router，，bower.json中不能加注释。
