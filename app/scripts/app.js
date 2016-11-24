@@ -23,6 +23,16 @@ angular
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider
+      .state('reader',{
+        url:'/reader',
+        template:'<div ui-view></div>',
+        abstract:true
+      })
+      .state('reader.create',{
+        url:'/create',
+        templateUrl:'views/reader/create.html',
+        controller:'MainCtrl.ReaderCreatCtrl'
+      })
       .state('main', {
         url: '/main',
         templateUrl: 'views/main.html',
