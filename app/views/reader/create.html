@@ -1,21 +1,21 @@
-<form ng-submit="submit(vm.form)">
+<form ng-submit="vm.submit(vm.form)" name="form" novalidate>
   <!--邮箱-->
   <div>
     <label for="email">邮箱</label>
-    <input type="email" id="email" ng-model="vm.form.email"/>
+    <input type="email" id="email" ng-required="true" ng-model="vm.form.email" name="email"  bf-field-error/>
   </div>
   <div>
     <label for="nickname">昵称</label>
-    <input type="text" id="nickname" ng-model="vm.form.name"/>
+    <input type="text" id="nickname" ng-model="vm.form.name" name="name"/>
   </div>
   <!--密码型字段-->
   <div>
     <label for="pwd">密码</label>
-    <input type="password" id="pwd" ng-model="vm.form.pwd"/>
+    <input type="password" id="pwd" ng-model="vm.form.pwd" name="pwd"/>
   </div>
   <div>
     <label for="retypedpwd">确认密码</label>
-    <input type="password" id="retypedpwd"/>
+    <input type="password" id="retypedpwd"  ng-model="vm.form.retypedpwd" bf-assert-same-as="vm.form.pwd" bf-field-error ng-required="true"/>
   </div>
 
   <div>
@@ -33,4 +33,6 @@
   <div>
     <button type="submit">提交</button>
   </div>
+
+  <a href="#/reader/list">进入列表页面</a>
 </form>

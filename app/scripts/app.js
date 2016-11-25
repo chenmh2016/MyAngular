@@ -31,7 +31,12 @@ angular
       .state('reader.create',{
         url:'/create',
         templateUrl:'views/reader/create.html',
-        controller:'MainCtrl.ReaderCreatCtrl'
+        controller:'MainCtrl.ReaderCreatCtrl as vm'
+      })
+      .state('reader.list',{
+        url:'/list',
+        templateUrl:'views/reader/list.html',
+        controller:'MainCtrl.listCtrl as vm'
       })
       .state('main', {
         url: '/main',
