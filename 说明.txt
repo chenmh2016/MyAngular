@@ -4,5 +4,18 @@
   }
 
 
+
+
 一开始执行bower所有的命令一直报错//，
 进入bower.json之后才发现这里面有我原来注释的ng-router，，bower.json中不能加注释。
+
+1、用户注册（reader creater），校验输入信息的合法性
+2、图书列表（reader list），前台过滤，前台分页
+3、使用ng-change向后台发送查询请求的时候，为了防止每一个输入就发一次请求，使用了lodash第三方插件的debounce函数，使用方法如下：
+通过bower install lodash下载lodash的文件，会自动放入bower_components文件中
+在index.html中增加对lodash.js的引用
+在controller中就可以直接来引用了，使用规则，
+                               var search=function(){
+                                 alert(vm.filter.$)
+                               };
+                               vm.search= _.debounce(search,500);

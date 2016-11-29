@@ -21,4 +21,9 @@ angular.module('testChenApp')
         dateCreated:'2015-12-07T00:25:32'
       })
     }
+
+    var search=function(){
+      alert(vm.filter.$)
+    };
+    vm.search= _.debounce(search,500);
   });

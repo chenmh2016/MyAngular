@@ -38,6 +38,11 @@ angular
         templateUrl:'views/reader/list.html',
         controller:'MainCtrl.listCtrl as vm'
       })
+      .state('reader.themeTree',{
+        url:'/themeTree',
+        templateUrl:'views/reader/themeTree.html',
+        controller:'MainCtrl.themeTreeCtrl as vm'
+      })
       .state('main', {
         url: '/main',
         templateUrl: 'views/main.html',

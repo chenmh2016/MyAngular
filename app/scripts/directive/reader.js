@@ -2,6 +2,7 @@
  * Created by meihuan on 2016/11/25.
  */
 angular.module('testChenApp')
+  //校验输入框的合法性的指令
   .directive('bfFieldError',function bfFieldError($compile){
   return{
     restrict:'A',
@@ -22,7 +23,7 @@ angular.module('testChenApp')
     }
   }
 })
-
+//判断确认密码正确与否的指令
    .directive('bfAssertSameAs',function bfAssertSameAs(){
       return{
         restrict:'A',

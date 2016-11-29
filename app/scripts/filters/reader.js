@@ -9,3 +9,30 @@ angular.module('testChenApp').filter('error',function(Errors){
     return Errors[name]||name;
   };
 })
+  .filter("timenew",function(){
+    return function(time){
+      var date=new Date();
+      //if(date.getTime()-time.getTime()>60){
+      //  return "一小时之前"
+      //}else if(date.getTime()-time.getTime()>10){
+      //  return "一会之前"
+      //}else if(date.getTime()-time.getTime()==1){
+      //  return "一分钟之前"
+      //}
+return "一分钟之前"
+    }
+  })
+
+  .filter("page",function(){
+    return function(input,page,pageSize){
+      if(!input){
+        return input;
+      }
+      if(page<0||pageSize<=0){
+        return [];
+      }
+      var start=page*pageSize;
+      var end=(page+1)*pageSize;
+      return input.slice(start,end)
+    }
+  })
