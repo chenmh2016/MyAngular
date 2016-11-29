@@ -6,7 +6,7 @@
  * Created by meihuan on 2016/11/24.
  */
 angular.module('testChenApp')
-  .controller('MainCtrl.themeTreeCtrl', function ($scope) {
+  .controller('MainCtrl.themeTreeCtrl', function ($scope,tree) {
     var　vm=this;
     vm.items=[
       {
@@ -45,5 +45,6 @@ angular.module('testChenApp')
         dateCreated:"2015-08-07T15:05:06"
       }
     ]
+    tree.enhance(vm.items);
 
   });
