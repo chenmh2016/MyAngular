@@ -48,6 +48,7 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+
       .state('/',{
         url: '/',
         templateUrl: 'views/main.html',

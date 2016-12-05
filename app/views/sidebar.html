@@ -1,0 +1,29 @@
+<div  ng-controller="MainCtrl">
+
+
+  <ul ng-if="items" style="border: 1px solid #ccc">
+    <li ng-repeat="item1 in items">
+      <div ng-click="item1.$foldToggle()" style="cursor: pointer">
+      <span ng-if="item1.$hasChildren()">
+        <span ng-if="!item1.$isFolder()">-</span>
+        <span ng-if="item1.$isFolder()">+</span>
+      </span>
+        {{item1.title}}
+        <!--<a ui-sref="{{item1.url}}">{{item1.title}}</a>-->
+      </div>
+      <!--子节点显示与否，诎诘语当前节点的model：$folder-->
+      <ul ng-if="item1.items&&!item1.$folded">
+        <li ng-repeat="item2 in item1.items">
+          <div ng-click="item2.$foldToggle()">
+            <span ng-if="item2.$hasChildren()">
+              <span ng-if="!item2.$isFolder()">-</span>
+              <span ng-if="item2.$isFolder()">+</span>
+            </span>
+            <a ui-sref="{{item2.state}}">{{item2.title}}</a>
+          </div>
+        </li>
+      </ul>
+    </li>
+
+  </ul>
+</div>

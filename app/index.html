@@ -16,54 +16,38 @@
   </head>
   <body ng-app="testChenApp">
     <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <!--<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>-->
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <!--<div class="navbar-header">-->
-
-            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">-->
-              <!--<span class="sr-only">Toggle navigation</span>-->
-              <!--<span class="icon-bar">sfsdfsdf</span>-->
-              <!--<span class="icon-bar">sdfsdfsdfsdf</span>-->
-              <!--<span class="icon-bar">sdfsdfsdsfsdfdf</span>-->
-
-              <!--<a ui-sref="main.links">友情连接</a>-->
-            <!--</button>-->
-
-            <!--<a class="navbar-brand" href="#/">testChen</a>-->
-          <!--</div>-->
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <!--<a ui-sref="about">友情连接</a>-->
-              <li class="active"><a ng-href="#/">主页dfsdf</a></li>
-              <li><a ng-href="#/about">关于</a></li>
-              <li><a ng-href="#/contact">联系</a></li>
-              <li><a ng-href="#/reader/create">第一个图书的应用</a></li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="container">
-    <div  ui-view></div>
-    </div>
 
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      <div class="row">
+      <div class="col-md-12 header">
+        <ul class="nav navbar-nav">
+          <li class="active"><a ng-href="#/">首页</a></li>
+          <li><a ng-href="#/about">关于我</a></li>
+          <li><a ng-href="#/contact">联系我</a></li>
+          <li><a ng-href="#/reader/create">登录</a></li>
+        </ul>
       </div>
-    </div>
+      </div>
 
+      <div class="row">
+        <div class="col-md-3 sidebar">
+          <div ng-include="'views/sidebar.html'"></div>
+        </div>
+        <div class="col-md-7" ui-view></div>
+      </div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+      <div class="row">
+      <div class="col-md-12 footer" id="footer">
+          <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      </div>
+      </div>
+
+      </div>
+
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
@@ -99,6 +83,7 @@
         <script src="scripts/directive/reader.js"></script>
         <script src="scripts/filters/reader.js"></script>
         <script src="scripts/constant/Errors.js"></script>
+        <script src="scripts/service/reader.js"></script>
 
         <!-- endbuild -->
 </body>
