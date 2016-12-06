@@ -48,7 +48,11 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-
+      .state('login', {
+        url: '/login',
+        templateUrl: 'views/AOP/login.html',
+        controller: 'UiPromptCtrl'
+      })
       .state('/',{
         url: '/',
         templateUrl: 'views/main.html',
