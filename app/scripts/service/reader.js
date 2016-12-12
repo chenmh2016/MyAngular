@@ -19,7 +19,7 @@ angular.module('testChenApp')
       item.$isFolded=function(){
         return this.$folded;
       };
-    }
+    };
       //对传递进来的数据进行强化
       this.enhance=function(items,childrenName){
         if(angular.isUndefined(childrenName)){
@@ -31,7 +31,7 @@ angular.module('testChenApp')
           if(item.$hasChildren()){
             self.enhance(item[childrenName],childrenName);
           }
-        })
+        });
       return items;
       }
   })

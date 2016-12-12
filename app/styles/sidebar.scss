@@ -1,0 +1,58 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+.sidebar{
+  background-color: #293038;
+  color:rgb(255,255,255);
+  cursor: pointer;
+  padding:0;
+  ul,li{
+    list-style: none;
+  }
+  ul{
+    padding-left: 0;
+  }
+  li:hover{
+    background: #313844;
+  }
+  .sidebar-title-arrow{
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    font-size:10px;
+  }
+  .trans{
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg); /* Internet Explorer */
+    -moz-transform:rotate(90deg); /* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg); /* Opera */
+  }
+  .sidebar-title{
+    background: #37424f;
+    border-bottom: 1px solid #414d5c;
+    height: 40px;
+    line-height: 40px;
+  }
+ .sidebar-content{
+   li{
+     display: block;
+     width: 100%;
+     height: 40px;
+     line-height: 40px;
+     overflow: hidden;
+     padding-left: 20px;
+
+     span{
+       margin-right: 5px;
+     }
+   }
+   .active{
+     background-color: #0099cc;
+   }
+ }
+
+
+}
+
+
