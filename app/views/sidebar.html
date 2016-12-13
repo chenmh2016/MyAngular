@@ -1,6 +1,5 @@
-<div  ng-controller="MainCtrl" class="sidebar">
-
-
+<div  ng-controller="SideBarCtrl" class="sidebar" >
+  <div class="sidebar-fold" ng-class="{'icon-unfold': !isSidebarFold,'icon-fold':isSidebarFold}" ng-click="toggleSidebarStatus()"></div>
   <div ng-if="items">
     <div ng-repeat="item1 in items">
       <div ng-click="item1.$foldToggle()" class="sidebar-title">
@@ -8,14 +7,14 @@
             <span ng-if="!item1.$folded" class="glyphicon glyphicon-play trans"></span>
             <span ng-if="item1.$folded" class="glyphicon glyphicon-play"></span>
           </span>
-          {{item1.title}}
+          <span ng-class="{'mini-content':isSidebarFold}">{{item1.title}}</span>
         <!--<a ui-sref="{{item1.url}}">{{item1.title}}</a>-->
       </div>
       <!--子节点显示与否，诎诘语当前节点的model：$folder-->
       <ul ng-if="item1.items&&!item1.$folded" class="sidebar-content">
         <li ng-repeat="item2 in item1.items"  ui-sref="{{item2.state}}"  ng-class="{active: isActive==item2.groupIndex}" ng-click="select(item2)">
-            <span class="{{item2.icon}}"></span>
-            {{item2.title}}
+           <div class="sidebar-content-icon"> <span class="{{item2.icon}}"></span></div>
+           <span ng-class="{'mini-content':isSidebarFold}"> {{item2.title}}</span>
         </li>
       </ul>
     </div>
