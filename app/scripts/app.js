@@ -31,7 +31,7 @@ angular
       .state('reader.create',{
         url:'/create',
         templateUrl:'views/reader/create.html',
-        controller:'MainCtrl.ReaderCreatCtrl as vm'
+        controller:'ReaderCreatCtrl as vm'
       })
       .state('reader.list',{
         url:'/list',
@@ -48,11 +48,7 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .state('login', {
-        url: '/login',
-        templateUrl: 'views/AOP/login.html',
-        controller: 'UiPromptCtrl'
-      })
+
       .state('/',{
         url: '/',
         templateUrl: 'views/main.html',
