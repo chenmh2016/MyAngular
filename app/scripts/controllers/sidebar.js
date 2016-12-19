@@ -38,15 +38,15 @@ angular.module('testChenApp')
         ]
       },{
         id:2,
-        title:"主题二",
+        title:"自定义指令",
         poster:"破浪",
         dateCreated:"2015-08-07T15:05:06",
         items:[
           {
             id:11,
-            title:"主题二",
-            url:"#",
-            state:"reader.create",
+            title:"expander",
+            url:"#/ngDirective/expander",
+            state:"ngDirective.expander",
             groupIndex:4,
             icon:"yundunicon-vuln-3"
           }

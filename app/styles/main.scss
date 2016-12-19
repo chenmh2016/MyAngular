@@ -78,3 +78,29 @@ body {
 .sidebar-full{
   //width:140px;
 }
+.expanderContent{
+  .expander{
+    border: 1px solid black;
+    width: 250px;
+
+    .title{
+      background: black;
+      color:white;
+      padding:.1em .3em;
+      cursor: pointer;
+    }
+    .body{
+      padding:.1em .3em;
+    }
+  }
+  .repeatClass{
+    color:red;
+    font-weight: bold;
+  }
+  ul,li{
+    list-style-type: none;
+  }
+.exampleClass{
+  border: 1px solid #ccc;
+}
+}

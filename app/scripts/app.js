@@ -43,6 +43,16 @@ angular
         templateUrl:'views/reader/themeTree.html',
         controller:'MainCtrl.themeTreeCtrl as vm'
       })
+      .state('ngDirective',{
+        url:'/ngDirective',
+        template:'<div ui-view></div>',
+        abstract:true
+      })
+      .state('ngDirective.expander',{
+        url:'/expander',
+        templateUrl:'views/NgDirective/expander.html',
+        controller:'ExpanderCtrl as vm'
+      })
       .state('main', {
         url: '/main',
         templateUrl: 'views/main.html',
