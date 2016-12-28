@@ -51,4 +51,15 @@
   </div>
 
 
+  <div ng-hide="temp.value!='order'" class="exampleClass">
+    <p>自定义指令的执行顺序展示</p>
+    <span>
+      打开调试的工具看输出，具体的看指令directivLife吧！
+      Injecting、compile、controller、pre-link、post-link
+    </span>
+    <div>
+      <directive-life count="1"></directive-life>
+    </div>
+  </div>
+
 </div>

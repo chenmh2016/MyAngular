@@ -21,8 +21,8 @@ angular.module('testChenApp')
       }
       ]
     },{
-      title:'主题二',
-      text:[{subText:'内容二'}]
+      title:'自定义指令',
+      text:[{subText:'sng-order'}]
     },{
       title:'主题三',
       text:[{subText:'内容三'}]

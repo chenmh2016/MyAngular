@@ -20,6 +20,7 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
+
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider
@@ -53,6 +54,41 @@ angular
         templateUrl:'views/NgDirective/expander.html',
         controller:'ExpanderCtrl as vm'
       })
+
+
+      .state('other',{
+        url:'/other',
+        template:'<div ui-view></div>',
+        abstract:true
+      })
+      .state('other.endlessScroll',{
+        url:'/endlessScroll',
+        templateUrl:'views/Other/EndlessScroll.html',
+        controller:'EndlessScrollCtrl as vm'
+      })
+
+
+      .state('css',{
+        url:'/css',
+        template:'<div ui-view></div>',
+        abstract:true
+      })
+      .state('css.overviews',{
+        url:'/overviews',
+        templateUrl:'views/CSS/overviews.html',
+        controller:''
+      })
+      .state('css.branch1',{
+        url:'/branch1',
+        templateUrl:'views/CSS/branch1.html',
+        controller:''
+      })
+      .state('css.branch2',{
+        url:'/branch2',
+        templateUrl:'views/CSS/branch2.html',
+        controller:''
+      })
+
       .state('main', {
         url: '/main',
         templateUrl: 'views/main.html',

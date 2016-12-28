@@ -100,7 +100,70 @@ body {
   ul,li{
     list-style-type: none;
   }
-.exampleClass{
-  border: 1px solid #ccc;
+  .exampleClass{
+    border: 1px solid #ccc;
+  }
 }
+.cssContent{
+  .nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+  }
+  .nav-tabs>li {
+    margin-left: -1px;
+    border-top: 1px solid #DDD;
+    border-left: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    z-index: 1;}
+  .nav-tabs>li.active {
+    border-top: 0px;
+    border-left: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    z-index: 3;}
+
+  .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    border-top: 2px solid #00A2CA;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #FFF;
+    color: #333;
+  }
+  .nav-tabs>li>a, .nav-tabs>li>a:focus {
+    color: #666;
+    border-left: 0px;
+    border-right: 0px;
+    margin-right: 0px;
+    padding: 10px 16px;
+    background: #FBFAF8;
+    border-bottom: 0px;
+  }
+  .nav-tabs>li>a, .nav-tabs.nav-justified>li>a {
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  .tab-span{
+    display: inline-block;
+    padding: 4px 6px;
+    margin-right: 2px;
+    cursor: pointer;
+    color: #999;
+    text-decoration: none;
+
+  }
+
+  li{
+    float:left;
+    .tab-span.active{
+      color:#fff;
+      background: #999;
+    }
+  }
+  .tab-span:hover{
+    color:#fff;
+    background: red;
+  }
+
+  //我们给一个菜单hover一个样式，选中了有一个样式，但是问题是：选中了的元素还会受到hover样式的影响。原因是，选择器权重的，hover和active一样重，甚至比active还重。解决：给active增加权重，以前就是一个ul，下面是a，现在ul下面先放li，再放a
+  //用到的就是：hover伪类，.active选中样式
+  //（侧边栏样式和菜单项样式相同）
 }

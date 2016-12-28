@@ -51,7 +51,39 @@ angular.module('testChenApp')
             icon:"yundunicon-vuln-3"
           }
         ]
-      }
+      },{
+        id:3,
+        title:"其他",
+        poster:"破浪",
+        dateCreated:"2015-08-07T15:05:06",
+        items:[
+          {
+            id:11,
+            title:"滚屏加载",
+            url:"#/other/endlessScroll",
+            state:"other.endlessScroll",
+            groupIndex:5,
+            icon:"yundunicon-vuln-3"
+          }
+
+        ]
+      },{
+      id:4,
+        title:"css",
+        poster:"破浪",
+        dateCreated:"2015-08-07T15:05:06",
+        items:[
+        {
+          id:11,
+          title:"仿云顿tab",
+          url:"#/css/overviews",
+          state:"css.overviews",
+          groupIndex:6,
+          icon:"yundunicon-vuln-3"
+        }
+
+      ]
+    }
     ];
     tree.enhance($scope.items);
     $scope.select = function (data) {

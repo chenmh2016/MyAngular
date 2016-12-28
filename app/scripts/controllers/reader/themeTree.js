@@ -6,8 +6,12 @@
  * Created by meihuan on 2016/11/24.
  */
 angular.module('testChenApp')
-  .controller('MainCtrl.themeTreeCtrl', function ($scope,tree) {
+  .controller('MainCtrl.themeTreeCtrl', function ($scope,tree,$timeout,$http) {
     var　vm=this;
+    $timeout(function(){
+      $http.get("http://localhost:9000/2342423432")
+        .success(function (response) {console.log("wwwww")});
+    });
     vm.items=[
       {
         id: 1,
