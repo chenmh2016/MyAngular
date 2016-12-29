@@ -21,19 +21,19 @@ angular.module('testChenApp')
             url:"#/reader/create",
             state:"reader.create",
             groupIndex:1,
-            icon:"yundunicon-over-3"
+            icon:"cmhIcon-xing"
           },{
             id:12,
             title:"图书列表",
             state:"reader.list",
             groupIndex:2,
-            icon:"yundunicon-emer-3"
+            icon:"cmhIcon-xing"
           },{
             id:13,
             title:"主题树",
             state:"reader.themeTree",
             groupIndex:3,
-            icon:"yundunicon-thre-3"
+            icon:"cmhIcon-xing"
           }
         ]
       },{
@@ -48,7 +48,7 @@ angular.module('testChenApp')
             url:"#/ngDirective/expander",
             state:"ngDirective.expander",
             groupIndex:4,
-            icon:"yundunicon-vuln-3"
+            icon:"cmhIcon-xing"
           }
         ]
       },{
@@ -63,7 +63,7 @@ angular.module('testChenApp')
             url:"#/other/endlessScroll",
             state:"other.endlessScroll",
             groupIndex:5,
-            icon:"yundunicon-vuln-3"
+            icon:"cmhIcon-xing"
           }
 
         ]
@@ -75,11 +75,11 @@ angular.module('testChenApp')
         items:[
         {
           id:11,
-          title:"仿云顿tab",
+          title:"仿tab",
           url:"#/css/overviews",
           state:"css.overviews",
           groupIndex:6,
-          icon:"yundunicon-vuln-3"
+          icon:"cmhIcon-xing"
         }
 
       ]

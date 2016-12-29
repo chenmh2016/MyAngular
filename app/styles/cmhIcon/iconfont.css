@@ -1,0 +1,45 @@
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1483012221117'); /* IE9*/
+  src: url('iconfont.eot?t=1483012221117#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1483012221117') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1483012221117') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1483012221117#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfontxingxing:before { content: "\e628"; }
+
+.icon-iconfontmingpian:before { content: "\e629"; }
+
+.icon-iconfontqicheyongpin:before { content: "\e636"; }
+
+.icon-iconfontmeizhuangrihua:before { content: "\e63b"; }
+
+.icon-iconfonthuangguan:before { content: "\e63c"; }
+
+.icon-iconfontshipin:before { content: "\e63d"; }
+
+.icon-iconfonttongzhuangmuying:before { content: "\e63f"; }
+
+.icon-iconfontgangcai:before { content: "\e64a"; }
+
+.icon-ChristmasMitten:before { content: "\e666"; }
+
+.icon-ChristmasStar:before { content: "\e667"; }
+
+.icon-Cruse:before { content: "\e669"; }
+
+.icon-Dreidel:before { content: "\e66a"; }
+
+.icon-Fireplace:before { content: "\e66b"; }
+
+.icon-HanukkahDonut:before { content: "\e66c"; }
+
