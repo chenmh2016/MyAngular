@@ -1,0 +1,65 @@
+<!--<div>-->
+  <!--<expander class="expander" expander-title="title">-->
+    <!--{{text}}-->
+  <!--</expander>-->
+<!--</div>-->
+<!--<hr>-->
+<!--同样可以做侧边栏或者导航-->
+<div class="expanderContent">
+<div>
+  <accordion>
+    <expander class="expander" ng-repeat="expander in expanders" expander-title="expander.title">
+      <p ng-repeat="subex in expander.text" ng-click="setTemp(subex.subText)">
+        {{subex.subText}}
+      </p>
+      </expander>
+  </accordion>
+</div>
+
+<h3>例子展示</h3>
+<div ng-hide="temp.value!='repeat'" class="exampleClass">
+  <p>ng-repeat的示例</p>
+  <ul ng-repeat="member in itemsRepeat">
+    <li ng-class="{'repeatClass': $middle}">{{$index+1}},{{member.name}}</li>
+  </ul>
+</div>
+  <div ng-hide="temp.value!='switch'" class="exampleClass">
+    <p>ng-switch的示例</p>
+    <select name="" id="" ng-model="itemSwitch">
+      <option value="boy">男孩</option>
+      <option value="girl">女孩</option>
+      <option value="crazy">野兽</option>
+    </select>
+    <ul ng-switch on="itemSwitch">
+      <li ng-switch-when="boy">这是一个男孩</li>
+      <li ng-switch-when="girl">这是一个女孩</li>
+      <li ng-switch-when="crazy">这是一个野兽</li>
+      <li ng-switch-default>谁都不知道这是个什么！！</li>
+    </ul>
+  </div>
+
+
+  <div ng-hide="temp.value!='selected'" class="exampleClass">
+    <p>ng-selected的示例</p>
+    <input type="checkbox" ng-model="girl"/>请选择女孩子
+    <select>
+      <option value="boy">男孩</option>
+      <option value="girl" ng-selected="girl">女孩</option>
+      <option value="crazy">野兽</option>
+    </select>
+
+  </div>
+
+
+  <div ng-hide="temp.value!='order'" class="exampleClass">
+    <p>自定义指令的执行顺序展示</p>
+    <span>
+      打开调试的工具看输出，具体的看指令directivLife吧！
+      Injecting、compile、controller、pre-link、post-link
+    </span>
+    <div>
+      <directive-life count="1"></directive-life>
+    </div>
+  </div>
+
+</div>

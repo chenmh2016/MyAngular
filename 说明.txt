@@ -1,0 +1,29 @@
+ 一、通过bower install angular-ui-router之后，在bower.json中生成这样一段话，没有在dependies中，我把angular-ui-router手动移动到了那里。。
+ "resolutions": {
+    "angular-ui-router": "~0.2.13"
+  }
+
+
+
+
+二、一开始执行bower所有的命令一直报错//，
+进入bower.json之后才发现这里面有我原来注释的ng-router，，bower.json中不能加注释。
+
+1、用户注册（reader creater），校验输入信息的合法性
+2、图书列表（reader list），前台过滤，前台分页
+3、使用ng-change向后台发送查询请求的时候，为了防止每一个输入就发一次请求，使用了lodash第三方插件的debounce函数，使用方法如下：
+通过bower install lodash下载lodash的文件，会自动放入bower_components文件中
+在index.html中增加对lodash.js的引用
+在controller中就可以直接来引用了，使用规则，
+                               var search=function(){
+                                 alert(vm.filter.$)
+                               };
+                               vm.search= _.debounce(search,500);
+
+    但是发现每一个grunt server的时候index.html中对于lodash文件的script就消失了，原因是因为，如果我们在bower.json中  dependencies了这个插件的name和version，就会自动的在index中引入，不用手动的引入。
+                               出现问题根源在于我们bower install了这个插件，但是在bower.json中没有依赖他，而是手动的在index中引入。
+三、注意：安装一些插件的时候用bower install ddd来安装，这样才能出现在bower_components里面相关的内容，然后再把插件的名字和版本号放到根下面的bower.json中
+例如，增加了一个bootstrap-datepicker插件，通过bower install bootstrap-datepicker 安装，然后在bower_components里面找到该插件的文件夹，查看其bower.json，找到name和_target
+写入bower.json中，如下所示：
+    "bootstrap-datepicker":"^1.6.4"
+这样之后，自动会在index.html文件中script引入我们下载的插件

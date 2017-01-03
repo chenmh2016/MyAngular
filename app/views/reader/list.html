@@ -1,0 +1,28 @@
+<form action="" class="form-horizontal">
+  <div class="form-group">
+    <label for="keyword" class="col-sm-1 control-label" style="padding-right: 0px;">过滤条件</label>
+    <div class="col-sm-5">
+      <input class="form-control" type="text" id="keyword" placeholder="请输入主题、作者或者发帖时间的任意部分" ng-model="vm.filter.$" ng-change="vm.search()"/>
+    </div>
+  </div>
+</form>
+
+<table class="table table-hover table-bordered ">
+  <thead>
+    <tr>
+      <th>主题</th>
+      <th>作者</th>
+      <th>发帖时间</th>
+    </tr>
+  </thead>
+  <tbody>
+       <tr ng-repeat="item in vm.items|filter:vm.filter|page:0:5">
+      <td>{{item.title}}</td>
+      <td>{{item.poster}}</td>
+      <!--<td>{{item.dateCreated|date:"yyyy-MM-dd HH:mm:ss"}}</td>-->
+      <td>{{item.dateCreated|timenew}}</td>
+    </tr>
+       <tr><td><input type="text" placeholder="输入页码" ng-model="vm.page.index"/></td></tr>
+  </tbody>
+
+</table>

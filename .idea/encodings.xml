@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/scripts/constant/Errors.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/AOP/login.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/NgDirective/expander.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/main.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/reader/create.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/reader/list.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/reader/themeTree.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/sidebar.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directive/ngDirective.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directive/reader.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/filters/reader.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/service/aop.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/service/reader.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/styles/main.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/styles/sidebar.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/AOP/login.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/NgDirective/expander.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/contact.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/main.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/reader/create.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/reader/list.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/reader/themeTree.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/sidebar.html" charset="UTF-8" />
+  </component>
+</project>
