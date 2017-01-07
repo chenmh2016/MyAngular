@@ -166,4 +166,183 @@ body {
   //我们给一个菜单hover一个样式，选中了有一个样式，但是问题是：选中了的元素还会受到hover样式的影响。原因是，选择器权重的，hover和active一样重，甚至比active还重。解决：给active增加权重，以前就是一个ul，下面是a，现在ul下面先放li，再放a
   //用到的就是：hover伪类，.active选中样式
   //（侧边栏样式和菜单项样式相同）
+
+ //css页面的样式 branch2
+.border-radius{
+  padding:10px;
+  background:#ccc;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+.div-shadow{
+  //background:red;
+  width:300px;
+  height:300px;
+  padding:30px;
+  background: url(../images/yeoman.png),url(../images/bg.jpg);
+  background-position:center,left top;
+  background-repeat:no-repeat,repeat;
+  background-size:60px 60px,100% 100%;
+  //background-origin:content-box;
+  box-shadow: 10px 10px 5px #ccc;
+}
+
+  #boxshadow{
+    position: relative;
+    -moz-box-shadow:1px 2px 4px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0,0,0,0.5);
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.5);
+    padding:10px;
+    background: white;
+  }
+  #boxshadow img{
+    width:100%;
+    border: 1px solid #8a4419;
+    border-style: inset;
+  }
+  #boxshadow::after{
+    content:"";
+    position: absolute;
+    left:10%;
+    bottom:0;
+    z-index: -1;
+    width:70%;
+    height:50px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  }
+
+  div.card{
+    width:250px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align:center;
+  }
+  div.header{
+    background-color:#4CAF50;
+    color:white;
+    padding:0px;
+    font-size:40px;
+     }
+
+
+  div.test{
+    white-space: nowrap;
+    width:100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    //text-overflow: clip;
+  }
+  div.test1{
+    width:9em;
+    word-break:keep-all;
+    border: 1px solid red;
+  }
+  div.test2{
+    width:9em;
+    word-break:break-all;
+    border: 1px solid red;
+  }
+  p.example{
+    background:yellow;
+    margin-top: 20px;
+  }
+
+
+  @font-face {
+    font-family: myFirstFont;
+    src:url(../SerendipityScript/SerendipityScript.woff);
+  }
+  div.font{
+    font-family: myFirstFont;
+  }
+  .change1,.change2{
+    width:100px;
+    height:100px;
+  }
+  .change1{
+    background: #ccc;
+  }
+  .change2{
+    background: blue;
+    transform:translate(10px 10px);
+    transform:scale(1.5);
+  }
+  .change3{
+    width:100px;
+    height:100px;
+    background: #ccc;
+    transition: width 3s linear 3s,height 3s,transform 2s;
+    -webkit-transition: width 3s linear 3s,height 3s,transform 2s;
+  }
+  .change3:hover{
+    width:200px;
+    height:200px;
+    -webkit-transform:rotate(180deg);
+    transform: rotate(180deg);
+  }
+  @keyframes myFirstAnimation {
+    //0%{
+    //  width:100px;
+    //  height:100px;
+    //  background:yellow
+    //}
+    50%{
+      width:200px;
+      height:200px;
+      background:red;
+    }
+    100%{
+      width:100px;
+      height:100px;
+      background:yellow
+    }
+  }
+  .change4{
+    width:100px;
+    height:100px;
+    background:yellow;
+    animation:myFirstAnimation 5s infinite;
+  }
+  @keyframes colorChange {
+    0%{
+      background:red ;
+    }
+    50%{
+      background: yellow;
+    }
+    100%{
+      background: blue;
+    }
+  }
+  .yuan1,.yuan2,.yuan3 {
+    width: 30px;
+    height: 30px;
+    float:left;
+    border-radius: 50%;
+    margin-right:30px;
+  }
+  .yuan1{
+    background: red;
+    animation:colorChange 2s infinite;
+    animation-delay: 0s;
+  }
+  .yuan2{
+    background: yellow;
+    animation:colorChange 2s infinite;
+    animation-delay:2s;
+  }
+  .yuan3{
+    background: blue;
+    animation:colorChange 2s infinite;
+    animation-delay: 4s;
+  }
+
+  @media screen and (min-width: 480px){
+    body{
+      background: red!important;
+      color:red !important;
+    }
+  }
+
+
+
 }

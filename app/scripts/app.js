@@ -18,7 +18,8 @@ angular
     //'ngRoute',
     'ui.router',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.select2'
   ])
 
   .config(function ($stateProvider, $urlRouterProvider) {
@@ -81,12 +82,12 @@ angular
       .state('css.branch1',{
         url:'/branch1',
         templateUrl:'views/CSS/branch1.html',
-        controller:''
+        controller:'branch1Controller'
       })
       .state('css.branch2',{
         url:'/branch2',
         templateUrl:'views/CSS/branch2.html',
-        controller:''
+        controller:'branch1Controller'
       })
 
       .state('main', {
