@@ -9,6 +9,17 @@ var controllerFn = function($scope,$location) {
   var div=$("<h6>cmh的jqury，测试用的</h6>");
   var html=$("#branch1");
   html.append(div);
+
+  //练习使用ajax请求json数据
+$("button").click(function(){
+  $.ajax({url:"../../../data/test.json",
+          success:function(result){
+            var pageData=result.data.list[0].accessKey;
+            $("#pageData").html(pageData)
+  }
+  })
+})
+
   //select2的使用方式
   //$("#sel_menu2").select2({
   //  tags: true,
