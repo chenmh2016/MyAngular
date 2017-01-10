@@ -1,17 +1,96 @@
+<style>
+  .exec span {
+    color: red;
+    heigth: 200px;
+    width: 200px;
+    border: 1px solid blue;
+  }
+
+  .father {
+    background: yellow;
+    padding: 10px;
+    /*height:30px;*/
+    border: 1px solid #000;
+  }
+
+  .son {
+    background: blue;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding: 15px;
+    border: 1px solid #004993;
+  }
+  .containerrrr{
+    height:300px;
+    background:#ccc;
+    display:table-cell;/*IE8以上及Chrome、Firefox*/
+    vertical-align:middle;/*IE8以上及Chrome、Firefox*/
+  }
+
+  div.pfirst> p{
+    color:red;
+  }
+</style>
 <div class="cssContent">
-<tab-nav index="2"></tab-nav>
-<div ui-view="css.branch2"></div>
+  <tab-nav index="2"></tab-nav>
+  <div ui-view="css.branch2"></div>
+
+  <div style="height: 500px;" class="exec">
+    <span>审判1</span><span>审判2</span>
+
+    <div class="father">
+      <div class="son">son</div>
+    </div>
+
+
+    <div>
+   <div style="text-align: center;">
+            <ul style="list-style: none;display: inline">
+              <li style="list-style: none;display: inline">元素1</li>
+              <li style="list-style: none;display: inline">元素3</li>
+              <li style="list-style: none;display: inline">元素2</li>
+            </ul>
+   </div>
+    </div>
+
+
+    <div class="containerrrr">
+      <div>
+        <p>看我是否可以居中。</p>
+        <p>看我是否可以居中。</p>
+        <p>看我是否可以居中。</p>
+        <p>看我是否可以居中。</p>
+        <p>看我是否可以居中。</p>
+      </div>
+    </div>
+
+
+    <div class="pfirst">
+      <h1>span远古三</h1>
+      <p>div的直接p元素1</p>
+      <div>
+        <p>div的孙子p元素111</p>
+        <p>div的孙子p元素222</p>
+      </div>
+      <p>div的直接p元素2</p>
+    </div>
+
+  </div>
+
+
   <p class="border-radius">圆角展示</p>
 
   <div class="div-shadow">盒子阴影</div>
 
   <p class="example">卡片效果的制作</p>
+
   <div id="boxshadow">
     <img src="../../images/bg.jpg" alt="bg.jpg" width="600" height="400"/>
   </div>
 
 
   <p class="example">文字卡片效果</p>
+
   <div class="card">
     <div class="header">
       <h1>1</h1>
@@ -23,6 +102,7 @@
 
 
   <p class="example">图片卡片效果</p>
+
   <div class="card">
     <div class="header">
       <img src="../images/yellow.jpg" alt="" width="100%" height="100"/>
@@ -33,13 +113,14 @@
   </div>
 
   <p class="example">将超过宽度的文本隐藏，用...表示，且文本不换行</p>
+
   <div class="test" title="测试长文本长文本长文本测试长文本长文本长文本测试长文本长文本长文本测试长文本长文本长文本测试长文本长文本长文本">
     测试长文本长文本长文本；测试长文本长文本长文本；测试长文本长文本长文本；测试长文本长文本长文本；测试长文本长文本长文本；测试长文本长文本长文本；测试长文本长文本长文本；测试长文本长文本长文本测试长文本长文本长文本；
   </div>
 
 
-
   <p class="example">测试单词拆分换行；如果某个单词太长，不适合在一个区域内，它扩展到外面。css3中，自动换行允许强制文本换行，即分裂他中间的一个字：</p>
+
   <div class="test1">
     This paragraph contains some text. This line will-break-at-hyphenates.
   </div>
@@ -49,11 +130,13 @@
 
 
   <p class="example">测试font-face 字体效果</p>
+
   <div class="font">
     测试font-face 字体效果测试font-face 字体效果测试font-face 字体效果测试font-face 字体效果测试font-face 字体效果测试font-face 字体效果测试font-face 字体效果
   </div>
 
   <p class="example">2D变换transform</p>
+
   <div class="change1">
     我是变换之前
   </div>
@@ -61,19 +144,23 @@
     我是变换之后
   </div>
   <p class="example">transition的使用，制作动画效果</p>
+
   <div class="change3">
     动画效果
   </div>
 
   <p class="example">@keyframes与animation的使用:动画的另外一种形式</p>
+
   <div class="change4">测试animation和keyframe的使用</div>
 
   <p class="example">loading的制作</p>
+
   <div class="yuan1">dfs</div>
   <div class="yuan2">sdf</div>
   <div class="yuan3">dsf</div>
   <!--ui-select2的使用-->
-  <select multiple id="sel_menu2" ui-select2="groupSetup" name="roleinit" ng-model="role.roleinit"  data-placeholder="请选择角色" required style="display: block;">
+  <select multiple id="sel_menu2" ui-select2="groupSetup" name="roleinit" ng-model="role.roleinit"
+          data-placeholder="请选择角色" required style="display: block;">
     <option>3234</option>
     <option>32345345345</option>
     <option>32345345345ertertre</option>
