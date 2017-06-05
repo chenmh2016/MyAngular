@@ -1,3 +1,36 @@
+<style>
+  .count-module{
+    color:#7e66c7;
+    position: relative;
+    height: 66px;
+    padding-top: 10px;
+    border: 1px solid #e1e6eb;
+    /*background: #fafafc;*/
+    text-align: center;
+  }
+  .count-module-icon{
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 66px;
+    height: 66px;
+    background: #ffa47c url(../../images/icon.png) 22px -40px no-repeat;
+    background-color: #7e66c7;
+    background-position: 22px 22px;
+  }
+  .count-module-icon span{
+    position: absolute;
+    top: 5px;
+    left: 80px;
+  }
+  .trend-count{
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+  }
+
+</style>
+
 <div class="cssContent" id="branch1">
 <tab-nav index="1"></tab-nav>
 <div ui-view="css.branch1"></div>
@@ -5,4 +38,35 @@
 
 <button ng-click="search()">按钮测试$http请求json文件数据</button>
 <span id="pageData">{{result}}</span>
+
+
+
+  <div class="row" style="margin-top:10px;">
+    <div class="col-sm-12 col-md-4">
+      <div class="count-module">
+        <div class="count-module-icon"></div>
+        <span>今日紧急事件</span>
+        <a href="#"><strong>23</strong><sub>次</sub></a>
+        <div class="trend-count">比昨日高2%</div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-4">
+      <div class="count-module">
+        <div class="count-module-icon"></div>
+        <span>今日紧急事件</span>
+        <a href="#"><strong>23</strong><sub>次</sub></a>
+        <div class="trend-count">比昨日高2%</div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-4">
+      <div class="count-module">
+        <div class="count-module-icon"></div>
+        <span>今日紧急事件</span>
+        <a href="#"><strong>23</strong><sub>次</sub></a>
+        <div class="trend-count">比昨日高2%</div>
+      </div>
+    </div>
+  </div>
 </div>
