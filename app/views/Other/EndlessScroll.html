@@ -1,14 +1,40 @@
-<div infinite-scroll="reddit.nextPage()" infinite-scroll-disabled="reddit.busy" infinite-scroll-distance="1">
-  <div ng-repeat="item in reddit.items">
-    <span class="score">{{item.score}}</span>
-    <span class="title">
-      <a ng-href="{{item.url}}" target="_blank">{{item.title}}</a>
-    </span>
-    <small>by {{item.author}}-
-      <a ng-href="http://reddit.com{{item.permalink}}" target="_blank">{{item.num_comments}}comments</a>
-    </small>
-    <div style="clear: both"></div>
-  </div>
-  <div ng-show="reddit.busy">Loading data...</div>
-  <div>Loading data...</div>
+<!--<div infinite-scroll="reddit.nextPage()" infinite-scroll-disabled="reddit.busy" infinite-scroll-distance="1">-->
+  <!--<div ng-repeat="item in reddit.items">-->
+    <!--<span class="score">{{item.score}}</span>-->
+    <!--<span class="title">-->
+      <!--<a ng-href="{{item.url}}" target="_blank">{{item.title}}</a>-->
+    <!--</span>-->
+    <!--<small>by {{item.author}}- -->
+      <!--<a ng-href="http://reddit.com{{item.permalink}}" target="_blank">{{item.num_comments}}comments</a>-->
+    <!--</small>-->
+    <!--<div style="clear: both"></div>-->
+  <!--</div>-->
+  <!--<div ng-show="reddit.busy">Loading data...</div>-->
+  <!--<div>Loading data...</div>-->
+<!--</div>-->
+
+<style type="text/css">
+
+
+  table {
+    margin: 3px auto;
+    border: 0px solid #0094ff;
+  }
+
+  td {
+    height: 30px;
+  }
+</style>
+<div infinite-scroll="loadMore()" infinite-scroll-disabled='data.busy' infinite-scroll-distance='20'>
+  <p>滚屏加载，将json中的数据弄得多一点，让其出现滚动条，每次滚动条的时候就会滚屏加载</p>
+  <table cellpadding="0" cellspacing="0" border="1">
+    <tr><th>序号</th><th>姓名</th><th>创建时间</th><th>性别</th></tr>
+    <tr ng-repeat="user in data.users">
+      <td>{{user.ID}}</td>
+      <td>{{user.Name}} </td>
+      <td>{{user.CreateDate}}</td>
+      <td>{{user.Gender|toGenderString}}</td>
+    </tr>
+  </table>
 </div>
+
