@@ -90,6 +90,11 @@ angular
         templateUrl:'views/CSS/branch2.html',
         controller:'branch1Controller'
       })
+      .state('css.d3',{
+        url:'/d3',
+        templateUrl:'views/CSS/d3.html',
+        controller:'d3Controller'
+      })
 
       .state('main', {
         url: '/main',

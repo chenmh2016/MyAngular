@@ -80,7 +80,15 @@ angular.module('testChenApp')
           state:"css.overviews",
           groupIndex:6,
           icon:"cmhIcon-xing"
-        }
+        },
+          {
+            id:22,
+            title:"d3",
+            url:"#/css/d3",
+            state:"css.d3",
+            groupIndex:7,
+            icon:"cmhIcon-xing"
+          }
 
       ]
     }
