@@ -27,3 +27,52 @@
   </li>
 
 </ul>
+
+
+<div class="form-group">
+  <lable class="col-sm-4 control-label">所属用户</lable>
+  <div class="col-sm-6">
+    <div class="form-control" ng-model="formData.user" >
+      <div ng-repeat="item in users" value="{{item.poster}}">{{item.poster}}
+        <div ng-if="item.items.length!=0">
+          <span ng-repeat="it in item.items">{{it.poster}}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+.menu>ul>li>ul{
+  position: relative;
+  left: 50px;
+  display: none;
+}
+.menu>ul>li:hover ul{
+  display: block;
+}
+
+  li{list-style: none}
+</style>
+<!--<div>-->
+  <!--<input type="text" class="form-control" ng-model="chooseText" ng-click="showList($event)">-->
+<!--<div class="menu" style="opacity: 1;border: 1px solid #ccc; z-index: 10;width: 100px;" >-->
+  <!--<ul>-->
+    <!--<li ng-repeat="item in data" style="position: relative;cursor: pointer;" >-->
+      <!--{{item.departmentName}}-->
+        <!--<span ng-if="item.children.length>0" style="margin-left: 20px;">&gt;</span>-->
+        <!--<ul style="border: 1px solid #ccc;">-->
+          <!--<li ng-repeat="itemsub in item.children" ng-click="chooseSub($event,itemsub)" style="width: 100px;">{{itemsub.departmentName}}-->
+
+          <!--</li>-->
+        <!--</ul>-->
+
+    <!--</li>-->
+
+  <!--</ul>-->
+
+<!--</div>-->
+<!--</div>-->
+
+

@@ -27,3 +27,5 @@
 写入bower.json中，如下所示：
     "bootstrap-datepicker":"^1.6.4"
 这样之后，自动会在index.html文件中script引入我们下载的插件
+
+bower 安装采用bower install ### --save-dev

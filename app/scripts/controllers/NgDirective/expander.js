@@ -10,6 +10,9 @@ angular.module('testChenApp')
   $scope.temp={
     value:""
   };
+
+
+
     $scope.expanders=[{
       title:'angularjs自带指令',
       text:[{
@@ -25,7 +28,8 @@ angular.module('testChenApp')
       text:[{subText:'sng-order'}]
     },{
       title:'主题三',
-      text:[{subText:'内容三'}]
+      text:[{subText:'内容三',
+      "title":"23423423","text":[{"subText":"2342342rfwerw"}]}]
     }];
 
     $scope.setTemp=function(string){
