@@ -20,7 +20,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.select2',
-    'infinite-scroll'
+    'infinite-scroll',
+    'treeControl'
   ])
 
   .config(function ($stateProvider, $urlRouterProvider) {

@@ -1,47 +1,58 @@
-<ul ng-if="vm.items">
-  <li ng-repeat="item1 in vm.items">
-    <div ng-click="item1.$foldToggle()" style="cursor: pointer">
-      <span ng-if="item1.$hasChildren()">
-        <span ng-if="!item1.$folded">-</span>
-        <span ng-if="item1.$folded">+</span>
-      </span>
-      {{item1.title}}
-    </div>
-    <!--子节点显示与否，诎诘语当前节点的model：$folder-->
-    <ul ng-if="item1.items&&!item1.$folded">
-      <li ng-repeat="item2 in item1.items">
-        <div ng-click="item2.$foldToggle()">
-            <span ng-if="item2.$hasChildren()">
-              <span ng-if="!item2.$folded">-</span>
-              <span ng-if="item2.$folded">+</span>
-            </span>
-          {{item2.title}}
-        </div>
-        <ul ng-if="item2.items&&!item2.$folded">
-          <li ng-repeat="item3 in item2.items">
-            {{item3.title}}
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+<!--<ul ng-if="vm.items">-->
+  <!--<li ng-repeat="item1 in vm.items">-->
+    <!--<div ng-click="item1.$foldToggle()" style="cursor: pointer">-->
+      <!--<span ng-if="item1.$hasChildren()">-->
+        <!--<span ng-if="!item1.$folded">-</span>-->
+        <!--<span ng-if="item1.$folded">+</span>-->
+      <!--</span>-->
+      <!--{{item1.title}}-->
+    <!--</div>-->
+    <!--&lt;!&ndash;子节点显示与否，诎诘语当前节点的model：$folder&ndash;&gt;-->
+    <!--<ul ng-if="item1.items&&!item1.$folded">-->
+      <!--<li ng-repeat="item2 in item1.items">-->
+        <!--<div ng-click="item2.$foldToggle()">-->
+            <!--<span ng-if="item2.$hasChildren()">-->
+              <!--<span ng-if="!item2.$folded">-</span>-->
+              <!--<span ng-if="item2.$folded">+</span>-->
+            <!--</span>-->
+          <!--{{item2.title}}-->
+        <!--</div>-->
+        <!--<ul ng-if="item2.items&&!item2.$folded">-->
+          <!--<li ng-repeat="item3 in item2.items">-->
+            <!--{{item3.title}}-->
+          <!--</li>-->
+        <!--</ul>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</li>-->
 
-</ul>
+<!--</ul>-->
 
 
-<div class="form-group">
-  <lable class="col-sm-4 control-label">所属用户</lable>
-  <div class="col-sm-6">
-    <div class="form-control" ng-model="formData.user" >
-      <div ng-repeat="item in users" value="{{item.poster}}">{{item.poster}}
-        <div ng-if="item.items.length!=0">
-          <span ng-repeat="it in item.items">{{it.poster}}</span>
-        </div>
-      </div>
+<!--1、实现下拉树选框-->
+<!--2、只能选择，不能输入-->
+<!--3、点击别的地方树选框隐藏-->
+<!--4、不选择不可以点击确认-->
 
-    </div>
+<lable class="col-sm-4 control-label">树啊</lable>
+<div class="col-sm-6"  style="position: relative">
+  <input type="text"  ng-model="selectContent" class="form-control"  ng-blur="isShowFn()"  ng-click="showTree()" readonly style='cursor:default;background:white;color:black' id="isSelected">
+  <i class="iconBottom" ng-click="showTree()"></i>
+  <div ng-if="isShow" treecontrol class="tree-classic" style="border: 1px solid #66AFE9;width: 100%;"
+       tree-model="treeList"
+       options="treeOptions"
+       on-selection="showSelected(node)"
+       selected-node="node1">
+    {{node.treeName}}
   </div>
 </div>
+
+
+<!--http://www.jq22.com/jquery-info5757-->
+
+<button class="btn btn-primary" >
+  确定
+</button>
 
 <style>
 .menu>ul>li>ul{
@@ -55,24 +66,5 @@
 
   li{list-style: none}
 </style>
-<!--<div>-->
-  <!--<input type="text" class="form-control" ng-model="chooseText" ng-click="showList($event)">-->
-<!--<div class="menu" style="opacity: 1;border: 1px solid #ccc; z-index: 10;width: 100px;" >-->
-  <!--<ul>-->
-    <!--<li ng-repeat="item in data" style="position: relative;cursor: pointer;" >-->
-      <!--{{item.departmentName}}-->
-        <!--<span ng-if="item.children.length>0" style="margin-left: 20px;">&gt;</span>-->
-        <!--<ul style="border: 1px solid #ccc;">-->
-          <!--<li ng-repeat="itemsub in item.children" ng-click="chooseSub($event,itemsub)" style="width: 100px;">{{itemsub.departmentName}}-->
-
-          <!--</li>-->
-        <!--</ul>-->
-
-    <!--</li>-->
-
-  <!--</ul>-->
-
-<!--</div>-->
-<!--</div>-->
 
 
